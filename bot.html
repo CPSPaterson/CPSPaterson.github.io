@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>Research bot - CPSP Labs</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.6;
+      color: #1e293b;
+      background-color: #f8fafc;
+    }
+    main { max-width: 720px; margin: 0 auto; padding: 48px 20px 64px; }
+    h1 { font-size: 2rem; line-height: 1.2; color: #0f172a; margin-bottom: 12px; }
+    h2 { font-size: 1.2rem; color: #0f172a; margin: 32px 0 8px; }
+    p, ul { margin-bottom: 12px; }
+    ul { padding-left: 22px; }
+    a { color: #2563eb; }
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.9em;
+      background: #e2e8f0;
+      padding: 2px 6px;
+      border-radius: 4px;
+      overflow-wrap: anywhere;
+    }
+    .lead { font-size: 1.1rem; color: #475569; }
+    footer { margin-top: 40px; font-size: 0.875rem; color: #64748b; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>About the CPSP Labs research bot</h1>
+    <p class="lead">
+      If you found this page from a user agent in your logs, this explains what made the
+      request and how to make it stop.
+    </p>
+
+    <h2>What it is</h2>
+    <p>
+      A small, privately run research tool. It reads public questions and discussions to
+      learn which electronic products people are asking for and cannot find. It identifies
+      itself as:
+    </p>
+    <p><code>cpsp-labs-research-bot/0.1 (+https://cpsp-labs.com/bot.html)</code></p>
+
+    <h2>What it does</h2>
+    <ul>
+      <li>Reads public posts through each site's official API, a few requests a minute at most, on a daily schedule.</li>
+      <li>Follows robots.txt and each site's terms. It stops and stays off a site that returns 403 or asks it to slow down repeatedly.</li>
+      <li>Never logs in, posts, votes, messages anyone, or tries to get past a CAPTCHA or block.</li>
+    </ul>
+
+    <h2>What it keeps</h2>
+    <ul>
+      <li>The text of public posts and a link back to each one, in a private database, for analysis by one person.</li>
+      <li>No usernames: authors are stored only as a one-way hash, to count how many different people raised a topic.</li>
+      <li>Nothing is republished, sold, or used to train a model.</li>
+    </ul>
+
+    <h2>Contact or opt out</h2>
+    <p>
+      To have a site or your content excluded, or to report a problem, open an issue at
+      <a href="https://github.com/CPSPaterson/CPSPaterson.github.io/issues">github.com/CPSPaterson/CPSPaterson.github.io/issues</a>.
+      Requests are acted on promptly.
+    </p>
+
+    <footer>
+      <p><a href="/">cpsp-labs.com</a></p>
+    </footer>
+  </main>
+</body>
+</html>
